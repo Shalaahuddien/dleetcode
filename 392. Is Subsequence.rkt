@@ -1,0 +1,7 @@
+(define (is-subsequence s t)
+  (let ((i 0))
+    (for ([c t])
+      (when (and (< i (string-length s))
+                 (equal? (string-ref s i) c))
+        (set! i (+ i 1))))
+    (= i (string-length s))))
